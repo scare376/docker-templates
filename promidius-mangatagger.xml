@@ -2,13 +2,13 @@
 <Container version="2">
   <Name>promidius-mangatagger</Name>
   <Repository>promidius/manga-tagger:nightly</Repository>
-  <Registry/>
+  <Registry>https://hub.docker.com/r/promidius/manga-tagger/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
-  <Project/>
+  <Support>https://github.com/ThePromidius/Manga-Tagger</Support>
+  <Project>https://github.com/ThePromidius/Manga-Tagger</Project
   <Overview/>
   <Category/>
   <WebUI/>
@@ -19,7 +19,15 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>Promidius's version of mangatagger. Requires mongodb to be setup beforehand.</Description>
+  <Description>Promidius's version of dockerized mangatagger. Requires mongodb to be setup beforehand.
+      Features:
+      Does not require FMD2
+      Only scrapes metadata from Anilist
+      Support for Manga/Manhwa/Manhua
+      Download cover image for each chapter (optional)
+      Slightly increased filename parsing capability
+      Docker image available
+      Manga specific configuration</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
@@ -188,7 +196,7 @@
   <Config Name="MANGA_TAGGER_THREADS" Target="MANGA_TAGGER_THREADS" Default="8" Mode="" Description="Container Variable: MANGA_TAGGER_THREADS" Type="Variable" Display="always" Required="false" Mask="false">8</Config>
   <Config Name="MANGA_TAGGER_MAX_QUEUE_SIZE" Target="MANGA_TAGGER_MAX_QUEUE_SIZE" Default="0" Mode="" Description="Container Variable: MANGA_TAGGER_MAX_QUEUE_SIZE" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="MANGA_TAGGER_DB_NAME" Target="MANGA_TAGGER_DB_NAME" Default="manga_tagger" Mode="" Description="Container Variable: MANGA_TAGGER_DB_NAME" Type="Variable" Display="always" Required="false" Mask="false">manga_tagger</Config>
-  <Config Name="MANGA_TAGGER_DB_HOST_ADDRESS" Target="MANGA_TAGGER_DB_HOST_ADDRESS" Default="" Mode="" Description="Container Variable: MANGA_TAGGER_DB_HOST_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false">10.4.19.203</Config>
+  <Config Name="MANGA_TAGGER_DB_HOST_ADDRESS" Target="MANGA_TAGGER_DB_HOST_ADDRESS" Default="" Mode="" Description="Container Variable: MANGA_TAGGER_DB_HOST_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MANGA_TAGGER_DB_PORT" Target="MANGA_TAGGER_DB_PORT" Default="27017" Mode="" Description="Container Variable: MANGA_TAGGER_DB_PORT" Type="Variable" Display="always" Required="false" Mask="false">27017</Config>
   <Config Name="MANGA_TAGGER_DB_USERNAME" Target="MANGA_TAGGER_DB_USERNAME" Default="manga_tagger" Mode="" Description="Container Variable: MANGA_TAGGER_DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">manga_tagger</Config>
   <Config Name="MANGA_TAGGER_DB_PASSWORD" Target="MANGA_TAGGER_DB_PASSWORD" Default="Manga4LYFE" Mode="" Description="Container Variable: MANGA_TAGGER_DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">Manga4LYFE</Config>
@@ -200,7 +208,7 @@
   <Config Name="MANGA_TAGGER_LOGGING_JSON" Target="MANGA_TAGGER_LOGGING_JSON" Default="false" Mode="" Description="Container Variable: MANGA_TAGGER_LOGGING_JSON" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="MANGA_TAGGER_LOGGING_TCP" Target="MANGA_TAGGER_LOGGING_TCP" Default="false" Mode="" Description="Container Variable: MANGA_TAGGER_LOGGING_TCP" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mangatagger-test/config</Config>
-  <Config Name="manga path" Target="/manga" Default="" Mode="rw" Description="Container Path: /manga" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/Books/manga-scans</Config>
-  <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Downloads/Everything/FMD</Config>
+  <Config Name="manga path" Target="/manga" Default="" Mode="rw" Description="Directory manga-tagger move tagged files to" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Directory manga-tagger watch" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MANGA_TAGGER_LOGGING_JSONTCP" Target="MANGA_TAGGER_LOGGING_JSONTCP" Default="false" Mode="" Description="Container Variable: MANGA_TAGGER_LOGGING_JSONTCP" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
