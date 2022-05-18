@@ -9,7 +9,15 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/ThePromidius/Manga-Tagger</Support>
   <Project>https://github.com/ThePromidius/Manga-Tagger</Project
-  <Overview/>
+  <Overview>Promidius's version of dockerized mangatagger. Requires mongodb to be setup beforehand.
+      Features:
+      Does not require FMD2
+      Only scrapes metadata from Anilist
+      Support for Manga/Manhwa/Manhua
+      Download cover image for each chapter (optional)
+      Slightly increased filename parsing capability
+      Docker image available
+      Manga specific configuration</Overview>
   <Category/>
   <WebUI/>
   <TemplateURL/>
