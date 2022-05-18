@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/ThePromidius/Manga-Tagger</Support>
-  <Project>https://github.com/ThePromidius/Manga-Tagger</Project
+  <Project>https://github.com/ThePromidius/Manga-Tagger</Project>
   <Overview>Promidius's version of dockerized mangatagger. Requires mongodb to be setup beforehand.
       Features:
       Does not require FMD2
